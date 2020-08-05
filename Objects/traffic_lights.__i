@@ -1,0 +1,7 @@
+--c99 -c --cpu Cortex-M4.fp -D__RTX -D__EVAL -g -O0 --apcs=interwork --split_sections
+-I.\RTE\_Target_1
+-IC:\Users\Mario\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include
+-IC:\Users\Mario\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\RTOS\RTX\INC
+-IC:\Users\Mario\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
+-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F410Rx
+-o .\objects\traffic_lights.o --omf_browse .\objects\traffic_lights.crf --depend .\objects\traffic_lights.d "traffic_lights.c"

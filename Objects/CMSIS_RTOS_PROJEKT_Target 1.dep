@@ -1,0 +1,56 @@
+Dependencies for Project 'CMSIS_RTOS_PROJEKT', Target 'Target 1': (DO NOT MODIFY !)
+F (.\main.c)(0x5A744BE0)(--c99 -c --cpu Cortex-M4.fp -D__RTX -D__EVAL -g -O0 --apcs=interwork --split_sections-I.\RTE\_Target_1-IC:\Users\Mario\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\Mario\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\RTOS\RTX\INC-IC:\Users\Mario\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F410Rx-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+I (osObjects.h)(0x5898AC00)
+I (C:\Users\Mario\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\RTOS\RTX\INC\cmsis_os.h)(0x5C8A78DC)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599F218E)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x599F218C)
+I (C:\Users\Mario\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h)(0x5A8FE7C4)
+I (C:\Users\Mario\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f410rx.h)(0x5A8FE7C4)
+I (C:\Users\Mario\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\core_cm4.h)(0x5C8FA234)
+I (C:\Users\Mario\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_version.h)(0x5B9768A4)
+I (C:\Users\Mario\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_compiler.h)(0x5C8FA234)
+I (C:\Users\Mario\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_armcc.h)(0x5C8FA234)
+I (C:\Users\Mario\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\mpu_armv7.h)(0x5C8FA234)
+I (C:\Users\Mario\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x5A8FE7C4)
+I (uart2.h)(0x5A6CEBAC)
+I (traffic_lights.h)(0x5A741192)
+F (.\uart2.c)(0x5A74177A)(--c99 -c --cpu Cortex-M4.fp -D__RTX -D__EVAL -g -O0 --apcs=interwork --split_sections-I.\RTE\_Target_1-IC:\Users\Mario\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\Mario\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\RTOS\RTX\INC-IC:\Users\Mario\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F410Rx-o .\objects\uart2.o --omf_browse .\objects\uart2.crf --depend .\objects\uart2.d)
+I (C:\Users\Mario\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h)(0x5A8FE7C4)
+I (C:\Users\Mario\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f410rx.h)(0x5A8FE7C4)
+I (C:\Users\Mario\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\core_cm4.h)(0x5C8FA234)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599F218E)
+I (C:\Users\Mario\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_version.h)(0x5B9768A4)
+I (C:\Users\Mario\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_compiler.h)(0x5C8FA234)
+I (C:\Users\Mario\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_armcc.h)(0x5C8FA234)
+I (C:\Users\Mario\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\mpu_armv7.h)(0x5C8FA234)
+I (C:\Users\Mario\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x5A8FE7C4)
+I (uart2.h)(0x5A6CEBAC)
+F (.\traffic_lights.c)(0x5A740E28)(--c99 -c --cpu Cortex-M4.fp -D__RTX -D__EVAL -g -O0 --apcs=interwork --split_sections-I.\RTE\_Target_1-IC:\Users\Mario\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\Mario\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\RTOS\RTX\INC-IC:\Users\Mario\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F410Rx-o .\objects\traffic_lights.o --omf_browse .\objects\traffic_lights.crf --depend .\objects\traffic_lights.d)
+I (traffic_lights.h)(0x5A741192)
+I (C:\Users\Mario\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h)(0x5A8FE7C4)
+I (C:\Users\Mario\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f410rx.h)(0x5A8FE7C4)
+I (C:\Users\Mario\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\core_cm4.h)(0x5C8FA234)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599F218E)
+I (C:\Users\Mario\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_version.h)(0x5B9768A4)
+I (C:\Users\Mario\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_compiler.h)(0x5C8FA234)
+I (C:\Users\Mario\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_armcc.h)(0x5C8FA234)
+I (C:\Users\Mario\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\mpu_armv7.h)(0x5C8FA234)
+I (C:\Users\Mario\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x5A8FE7C4)
+F (.\traffic_lights.h)(0x5A741192)()
+F (C:\Users\Mario\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\RTOS\RTX\LIB\ARM\RTX_CM4.lib)(0x5C8BB45A)()
+F (RTE\CMSIS\RTX_Conf_CM.c)(0x5898AC00)(--c99 -c --cpu Cortex-M4.fp -D__RTX -D__EVAL -g -O0 --apcs=interwork --split_sections-I.\RTE\_Target_1-IC:\Users\Mario\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\Mario\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\RTOS\RTX\INC-IC:\Users\Mario\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F410Rx-o .\objects\rtx_conf_cm.o --omf_browse .\objects\rtx_conf_cm.crf --depend .\objects\rtx_conf_cm.d)
+I (C:\Users\Mario\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\RTOS\RTX\INC\cmsis_os.h)(0x5C8A78DC)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599F218E)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x599F218C)
+I (C:\Users\Mario\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\RTOS\RTX\INC\RTX_CM_lib.h)(0x5C8A78DC)
+F (RTE\Device\STM32F410RBTx\startup_stm32f410rx.s)(0x58232FC8)(--cpu Cortex-M4.fp --pd "__RTX SETA 1" --pd "__EVAL SETA 1" -g --apcs=interwork -I.\RTE\_Target_1-IC:\Users\Mario\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\Mario\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\RTOS\RTX\INC-IC:\Users\Mario\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include--pd "__UVISION_VERSION SETA 527" --pd "_RTE_ SETA 1" --pd "STM32F410Rx SETA 1"--list .\listings\startup_stm32f410rx.lst --xref -o .\objects\startup_stm32f410rx.o --depend .\objects\startup_stm32f410rx.d)
+F (RTE\Device\STM32F410RBTx\system_stm32f4xx.c)(0x58232FC8)(--c99 -c --cpu Cortex-M4.fp -D__RTX -D__EVAL -g -O0 --apcs=interwork --split_sections-I.\RTE\_Target_1-IC:\Users\Mario\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\Mario\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\RTOS\RTX\INC-IC:\Users\Mario\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F410Rx-o .\objects\system_stm32f4xx.o --omf_browse .\objects\system_stm32f4xx.crf --depend .\objects\system_stm32f4xx.d)
+I (C:\Users\Mario\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h)(0x5A8FE7C4)
+I (C:\Users\Mario\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f410rx.h)(0x5A8FE7C4)
+I (C:\Users\Mario\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\core_cm4.h)(0x5C8FA234)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599F218E)
+I (C:\Users\Mario\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_version.h)(0x5B9768A4)
+I (C:\Users\Mario\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_compiler.h)(0x5C8FA234)
+I (C:\Users\Mario\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_armcc.h)(0x5C8FA234)
+I (C:\Users\Mario\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\mpu_armv7.h)(0x5C8FA234)
+I (C:\Users\Mario\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x5A8FE7C4)
