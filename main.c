@@ -1,12 +1,12 @@
 /*************************************************************************************************************************
-DOCUMENT:		main.c file of CMSIS RTX RTOS student project.  
+DOCUMENT:	main.c file of CMSIS RTX RTOS student project.  
 
-						CMSIS RTOS Smart Traffic Light:
-						- 2 inputs for buttons, used by pedestrians to reduce time waiting for a green light
-						- 2 inputs for vehicle counting sensors.
-						- Driver for controlling traffic lights on a simple intersection with 2 roads
+		CMSIS RTOS Smart Traffic Light:
+			- 2 inputs for buttons, used by pedestrians to reduce time waiting for a green light
+			- 2 inputs for vehicle counting sensors.
+			- Driver for controlling traffic lights on a simple intersection with 2 roads
 				
-AUTHOR:			Mario Gavran, E5029604, University of Maribor - FERI
+AUTHOR:		Mario Gavran, E5029604, University of Maribor - FERI
 *************************************************************************************************************************/
 
 #define osObjectsPublic                 // define objects in main module
@@ -226,75 +226,74 @@ void thread3 (void const *argument)
 			}
 		}
 			
-			// Reciveing signals:
-			event_signal = osSignalWait(0,(hor_delay/2));	// Wait for signal to apear, for half of calculated delay.
+		// Reciveing signals:
+		event_signal = osSignalWait(0,(hor_delay/2));	// Wait for signal to apear, for half of calculated delay.
 						
-			signal_flags = event_signal.value.signals;	// Save recived signal, from event structure.
+		signal_flags = event_signal.value.signals;	// Save recived signal, from event structure.
 			
-			if(signal_flags == V_PEDESTRIAN)		// Test if it is proper flag.
-			{
-				osDelay((hor_delay / 4));		// If it is, do only 1/4 of calculated delay. 
-			}
-			else
-			{
-				osDelay(((hor_delay/2) + (hor_delay/4)));	// If it is not, do the other half of delay.
-			}
-			
-			signal_flags = 0;				// Clear flags before reciving another signal.
-			
-
-			HORoff_VERon();					// Continue driving horizontal red and vertical green.
-			
-			
-			event_message = osMessageGet(message_q_id, osWaitForever);	// Wait for message until it arrives.
+		if(signal_flags == V_PEDESTRIAN)		// Test if it is proper flag.
+		{
+			osDelay((hor_delay / 4));		// If it is, do only 1/4 of calculated delay. 
+		}
+		else
+		{
+			osDelay(((hor_delay/2) + (hor_delay/4)));	// If it is not, do the other half of delay.
+		}
 		
-			if(event_message.status == osEventMessage)		// Check if message is recived properly.
+		signal_flags = 0;				// Clear flags before reciving another signal.
+		
+		HORoff_VERon();					// Continue driving horizontal red and vertical green.
+
+		event_message = osMessageGet(message_q_id, osWaitForever);	// Wait for message until it arrives.
+		
+		if(event_message.status == osEventMessage)		// Check if message is recived properly.
+		{
+			osMutexWait(uart2_mutex_id, osWaitForever);
+			u2_sendStr("T3:PRIMLJENO \r");			// *debugging
+			osMutexRelease(uart2_mutex_id);
+				
+			message = event_message.value.v;		// Reconstruct data from message.
+			hvc1 = message & 0x0000FFFF;
+			vvc1 = (message & 0xFFFF0000) >> 16;
+				
+			// Set delay for horizontal green:
+			if(hvc1 > vvc1)
 			{
-				osMutexWait(uart2_mutex_id, osWaitForever);
-				u2_sendStr("T3:PRIMLJENO \r");			// *debugging
-				osMutexRelease(uart2_mutex_id);
-				
-				message = event_message.value.v;		// Reconstruct data from message.
-				hvc1 = message & 0x0000FFFF;
-				vvc1 = (message & 0xFFFF0000) >> 16;
-				
-				// Set delay for horizontal green:
-				if(hvc1 > vvc1)
-				{
-					ver_delay = 3000 - (200*(hvc1-vvc1));
-				}
-				else if(hvc1 < vvc1)				//to je vertical
-				{
-					ver_delay = 3000 + (200*(vvc1-hvc1));
-				}
-				
-				// Reset vehicle count variables:
-				hvc1=0;
-				vvc1=0;
-				
-				// Green light must not be less than 500ms:
-				if(ver_delay <= 500)
-				{
-					ver_delay = 500;
-				}
+				ver_delay = 3000 - (200*(hvc1-vvc1));
+			}
+			else if(hvc1 < vvc1)				//to je vertical
+			{
+				ver_delay = 3000 + (200*(vvc1-hvc1));
 			}
 			
-			// Reciveing signals:
-			event_signal = osSignalWait(0,(ver_delay/2));		// Wait for signal to apear, for half of the calculated delay.
-			
-			signal_flags = event_signal.value.signals;		// Save recived signal, from event structure.
-			
-			if(signal_flags == H_PEDESTRIAN)			// Test if it is proper flag.
+			// Reset vehicle count variables:
+			hvc1=0;
+			vvc1=0;
+				
+			// Green light must not be less than 500ms:
+			if(ver_delay <= 500)
 			{
-				osDelay((ver_delay/4));				// If it is, do only a 1/4 of calculated delay. 
+				ver_delay = 500;
 			}
-			else
-			{
-				osDelay(((ver_delay/2) + (ver_delay/4)));	// If it is not, do the other half of delay.
-			}
-			
-			signal_flags = 0;					// Clear flags before reciving another signal.	
+		}
+		
+		// Reciveing signals:
+		event_signal = osSignalWait(0,(ver_delay/2));		// Wait for signal to apear, for half of the calculated delay.
+		
+		signal_flags = event_signal.value.signals;		// Save recived signal, from event structure.
+		
+		if(signal_flags == H_PEDESTRIAN)			// Test if it is proper flag.
+		{
+			osDelay((ver_delay/4));				// If it is, do only a 1/4 of calculated delay. 
+		}
+		else
+		{
+			osDelay(((ver_delay/2) + (ver_delay/4)));	// If it is not, do the other half of delay.
+		}
+		
+		signal_flags = 0;					// Clear flags before reciving another signal.	
 	}
 }
 //************************************************************************************************************************
 //************************************************************************************************************************
+
